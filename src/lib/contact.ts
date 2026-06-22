@@ -1,32 +1,32 @@
 export const AGENT = {
-  name: 'Inmo Analista',
+  name: 'MPV Inmobiliaria',
   title: 'Inmobiliaria',
-  city: 'Requena',
-  province: 'Valencia',
-  tagline: 'Asesoramiento personalizado para compra, venta y alquiler en Requena y la provincia de Valencia.',
+  city: 'El Casar',
+  province: 'Guadalajara',
+  tagline: 'Asesoramiento personalizado para compra, venta y alquiler en El Casar y la provincia de Guadalajara.',
 } as const
 
 export const CONTACT = {
   address: {
-    line1: 'Av. del General Pereyra, 37',
-    line2: '46340 Requena, Valencia',
-    full: 'Av. del General Pereyra, 37, 46340 Requena, Valencia',
-    mapsQuery: 'Av.+del+General+Pereyra,+37,+46340+Requena,+Valencia',
+    line1: 'C. la Giralda, 1793',
+    line2: '19170 El Casar, Guadalajara',
+    full: 'C. la Giralda, 1793, 19170 El Casar, Guadalajara',
+    mapsQuery: 'C.+la+Giralda,+1793,+19170+El+Casar,+Guadalajara',
   },
   phone: {
-    display: '675 90 08 72',
-    e164: '+34675900872',
-    wa: '34675900872',
+    display: '682 82 72 69',
+    e164: '+34682827269',
+    wa: '34682827269',
   },
-  email: 'info@inmoanalista.com',
+  email: '',
 } as const
 
 export const OPENING_HOURS = [
-  { day: 'Lunes', hours: '10:00–14:00 · 16:30–20:30' },
-  { day: 'Martes', hours: '10:00–14:00 · 16:30–20:30' },
-  { day: 'Miércoles', hours: '10:00–14:00 · 16:30–20:30' },
-  { day: 'Jueves', hours: '10:00–14:00 · 16:30–20:30' },
-  { day: 'Viernes', hours: '10:00–14:00 · 16:30–20:30' },
+  { day: 'Lunes', hours: '10:00–19:00' },
+  { day: 'Martes', hours: '10:00–19:00' },
+  { day: 'Miércoles', hours: '10:00–19:00' },
+  { day: 'Jueves', hours: '10:00–19:00' },
+  { day: 'Viernes', hours: '10:00–19:00' },
   { day: 'Sábado', hours: 'Cerrado' },
   { day: 'Domingo', hours: 'Cerrado' },
 ] as const
@@ -38,4 +38,4 @@ export const hasEmail = CONTACT.email.trim().length > 0
 export const emailHref = hasEmail ? `mailto:${CONTACT.email}` : ''
 export const whatsappDisplay = `+34 ${CONTACT.phone.display}`
 
-export const scheduleSummary = 'Lun–Vie: 10:00–14:00 · 16:30–20:30 · Sáb y Dom: Cerrado'
+export const scheduleSummary = 'Lun–Vie: 10:00–19:00 · Sáb y Dom: Cerrado'

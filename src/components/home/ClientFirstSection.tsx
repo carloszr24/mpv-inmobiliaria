@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: '+100', label: 'propiedades vendidas' },
+  { value: '+300', label: 'propiedades vendidas' },
   { value: '< 60 días', label: 'tiempo medio de cierre' },
   { value: '100%', label: 'atención personalizada' },
 ]
@@ -19,7 +19,7 @@ const pillars = [
   },
   {
     title: 'Acompañamiento real',
-    desc: 'Te guiamos de principio a fin con un trato cercano y profesional en Requena y provincia.',
+    desc: 'Te guiamos de principio a fin con un trato cercano y profesional en El Casar y provincia.',
   },
 ]
 

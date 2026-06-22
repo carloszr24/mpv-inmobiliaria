@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --brand-cyan: #0086d0;
-  --brand-cyan-light: #5eb5e8;
-  --brand-cyan-mid: #0077be;
-  --brand-cyan-dark: #005a94;
-  --brand-charcoal: #303030;
-  --brand-sand: #e8f4fc;
+  --brand-cyan: #605850;
+  --brand-cyan-light: #8a8078;
+  --brand-cyan-mid: #585048;
+  --brand-cyan-dark: #3d3832;
+  --brand-charcoal: #181818;
+  --brand-sand: #f5f0eb;
   --brand-white: #ffffff;
   --gold: var(--brand-cyan);
   --gold-light: var(--brand-cyan-light);

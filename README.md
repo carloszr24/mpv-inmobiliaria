@@ -1,4 +1,4 @@
-# Inmo Analista — Web
+# MPV Inmobiliaria — Web
 
 Next.js + TypeScript + Tailwind. Catálogo de propiedades en archivo local (`src/data/properties.ts`).
 

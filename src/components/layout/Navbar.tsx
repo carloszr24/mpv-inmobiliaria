@@ -99,7 +99,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/images/inmo-analista.png"
+              src="/images/inmo-mpv.png"
               alt={`${AGENT.name} logo`}
               width={300}
               height={80}

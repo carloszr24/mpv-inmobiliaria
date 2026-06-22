@@ -23,9 +23,9 @@ const logo = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Inmo Analista | Agencia inmobiliaria en Requena, Valencia',
-  description: 'Compra, venta y alquiler de propiedades en Requena y la provincia de Valencia con asesoramiento cercano y profesional.',
-  keywords: 'inmo analista, inmobiliaria requena, agencia inmobiliaria valencia, compra vivienda, venta vivienda, alquiler',
+  title: 'MPV Inmobiliaria | Agencia inmobiliaria en El Casar, Guadalajara',
+  description: 'Compra, venta y alquiler de propiedades en El Casar y la provincia de Guadalajara con asesoramiento cercano y profesional.',
+  keywords: 'mpv inmobiliaria, inmobiliaria el casar, agencia inmobiliaria guadalajara, compra vivienda, venta vivienda, alquiler',
 }
 
 export default function RootLayout({
