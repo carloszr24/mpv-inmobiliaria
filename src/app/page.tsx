@@ -5,7 +5,6 @@ import { FeaturedPropertiesGrid } from '@/components/home/FeaturedPropertiesGrid
 import { HeroCarousel } from '@/components/home/HeroCarousel'
 import { HeroScrollHint } from '@/components/home/HeroScrollHint'
 import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
-import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
 
 function HomeIcon() {
   return (
@@ -78,8 +77,6 @@ export default async function HomePage() {
       </section>
 
       <ClientFirstSection />
-
-      <ReviewsCarousel />
 
       {/* FEATURED PROPERTIES */}
       <section className="py-24 px-6 md:px-10 max-w-7xl mx-auto">

@@ -25,11 +25,11 @@ function StarRow({ rating = GOOGLE_RATING }: { rating?: number }) {
   )
 }
 
-export function ReviewsCarousel() {
+export function ReviewsCarousel({ embedded = false }: { embedded?: boolean }) {
   const [isVisible, setIsVisible] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
-  const rootRef = useRef<HTMLElement | null>(null)
+  const rootRef = useRef<HTMLDivElement | null>(null)
   const trackRef = useRef<HTMLDivElement | null>(null)
   const rafRef = useRef<number | null>(null)
   const lastFrameRef = useRef<number | null>(null)
@@ -133,51 +133,59 @@ export function ReviewsCarousel() {
     resumeAutoplay()
   }
 
-  return (
-    <section ref={rootRef} className="bg-white py-20 md:py-24 px-6 md:px-10 overflow-hidden border-y border-stone-100">
-      <div className="max-w-7xl mx-auto">
-        <div
-          className={`text-center max-w-3xl mx-auto mb-10 md:mb-12 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">Opiniones</p>
-          <h2 className="section-title mb-5">Lo que dicen nuestros clientes</h2>
-          <div className="flex flex-col items-center gap-2 text-stone-700">
-            <StarRow />
-            <p className="text-base md:text-lg font-medium">
-              {GOOGLE_RATING.toString().replace('.', ',')} / 5 en Google · {GOOGLE_REVIEW_COUNT} reseñas
-            </p>
-          </div>
+  const content = (
+    <>
+      <div
+        className={`text-center max-w-3xl mx-auto mb-10 md:mb-12 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">Opiniones</p>
+        <h2 className="section-title mb-5">Lo que dicen nuestros clientes</h2>
+        <div className="flex flex-col items-center gap-2 text-stone-700">
+          <StarRow />
+          <p className="text-base md:text-lg font-medium">
+            {GOOGLE_RATING.toString().replace('.', ',')} / 5 en Google · {GOOGLE_REVIEW_COUNT} reseñas
+          </p>
         </div>
+      </div>
 
-        <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div
-            className="overflow-hidden select-none touch-pan-y"
-            aria-label="Carrusel de reseñas de clientes"
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={handlePointerUp}
-            onPointerCancel={handlePointerUp}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => {
-              if (!isDraggingRef.current) resumeAutoplay()
-            }}
-          >
-            <div ref={trackRef} className="flex items-stretch gap-4 md:gap-6 will-change-transform">
-              {loopedReviews.map((review, idx) => (
-                <div key={`${review.id}-${idx}`} className="shrink-0 w-[86vw] sm:w-[68vw] md:w-[44vw] lg:w-[31vw]">
-                  <article className="card-hover h-full min-h-56 bg-stone-50 border border-stone-200 p-6 md:p-7 rounded-lg shadow-sm hover:shadow-lg">
-                    <StarRow />
-                    <p className="text-stone-600 text-sm md:text-base leading-relaxed mt-4">&ldquo;{review.text}&rdquo;</p>
-                    <p className="mt-6 text-stone-900 font-semibold">{review.name}</p>
-                  </article>
-                </div>
-              ))}
-            </div>
+      <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className="overflow-hidden select-none touch-pan-y"
+          aria-label="Carrusel de reseñas de clientes"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => {
+            if (!isDraggingRef.current) resumeAutoplay()
+          }}
+        >
+          <div ref={trackRef} className="flex items-stretch gap-4 md:gap-6 will-change-transform">
+            {loopedReviews.map((review, idx) => (
+              <div key={`${review.id}-${idx}`} className="shrink-0 w-[86vw] sm:w-[68vw] md:w-[44vw] lg:w-[31vw]">
+                <article className="card-hover h-full min-h-56 bg-white border border-stone-200 p-6 md:p-7 rounded-lg shadow-sm hover:shadow-lg">
+                  <StarRow />
+                  <p className="text-stone-600 text-sm md:text-base leading-relaxed mt-4">&ldquo;{review.text}&rdquo;</p>
+                  <p className="mt-6 text-stone-900 font-semibold">{review.name}</p>
+                </article>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </>
+  )
+
+  if (embedded) {
+    return <div ref={rootRef}>{content}</div>
+  }
+
+  return (
+    <section className="bg-white py-20 md:py-24 px-6 md:px-10 overflow-hidden border-y border-stone-100">
+      <div ref={rootRef} className="max-w-7xl mx-auto">{content}</div>
     </section>
   )
 }
