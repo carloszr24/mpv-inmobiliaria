@@ -6,8 +6,8 @@ export function HeroCarousel() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-stone-950" aria-hidden="true">
       <Image
-        src="/images/guadalajara.jpeg"
-        alt="Vista de Guadalajara"
+        src="/images/salamanca.webp"
+        alt="Vista de Salamanca"
         fill
         priority
         className="object-cover object-center"
