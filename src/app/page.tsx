@@ -49,10 +49,10 @@ export default async function HomePage() {
         {/* Content */}
         <div className="relative z-10 -mt-4 md:-mt-6 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
           <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
-            Compra o vende tu vivienda en El Casar
+            Compra o vende tu vivienda en Guadalajara
             <span className="hidden md:inline"> </span>
             <br className="md:hidden" aria-hidden="true" />
-            en <span className="text-brand-cyan-light [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
+            en <span className="text-white font-semibold [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
           </h1>
           <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,22rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
             Te acompañamos desde el inicio hasta el final de la operación con un servicio totalmente personalizado
@@ -69,7 +69,7 @@ export default async function HomePage() {
             </Link>
             <ValoracionGratuitaModal
               triggerLabel="Quiero vender"
-              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-brand-cyan-light text-white box-border hover:bg-brand-cyan-light hover:text-stone-900 transition-colors duration-200"
+              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-stone-900 transition-colors duration-200"
             />
           </div>
           <HeroScrollHint />
@@ -125,7 +125,7 @@ export default async function HomePage() {
               {
                 icon: FileIcon,
                 title: 'Valoración profesional',
-                desc: 'Conoce el precio real de mercado de tu inmueble en El Casar y la provincia de Guadalajara.',
+                desc: 'Conoce el precio real de mercado de tu inmueble en Guadalajara y provincia.',
               },
               {
                 icon: HandshakeIcon,
@@ -133,7 +133,7 @@ export default async function HomePage() {
                 desc: 'Negociación, documentación y acompañamiento para una decisión segura.',
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-xl p-8 border border-stone-700 bg-stone-950/40 hover:border-brand-cyan transition-colors duration-300">
+              <div key={item.title} className="rounded-xl p-8 border border-stone-700 bg-stone-950/40 hover:border-white transition-colors duration-300">
                 <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg border border-stone-700 text-stone-100">
                   <item.icon />
                 </span>
@@ -146,7 +146,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="bg-gradient-to-r from-brand-cyan-dark via-brand-cyan-mid to-brand-cyan py-24 px-6 md:px-10 text-center">
+      <section className="bg-gradient-to-r from-stone-950 via-stone-900 to-black py-24 px-6 md:px-10 text-center">
         <div className="max-w-2xl mx-auto rounded-2xl border border-white/25 bg-black/10 px-6 py-10 md:px-10 md:py-12">
           <h2 className="mb-6 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
             ¿Listo para encontrar<br />tu próximo hogar?
@@ -157,13 +157,13 @@ export default async function HomePage() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contacto"
-              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-transparent bg-white px-10 py-3 text-sm font-medium tracking-wide text-brand-cyan-dark hover:bg-brand-cyan-light transition-colors duration-200"
+              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-transparent bg-white px-10 py-3 text-sm font-medium tracking-wide text-stone-900 hover:bg-stone-100 transition-colors duration-200"
             >
               Hablar con nosotros
             </Link>
             <Link
               href="/propiedades"
-              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-white px-10 py-3 text-sm font-medium tracking-wide text-white hover:bg-white hover:text-brand-cyan-dark transition-colors duration-200"
+              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-white px-10 py-3 text-sm font-medium tracking-wide text-white hover:bg-white hover:text-stone-900 transition-colors duration-200"
             >
               Ver propiedades
             </Link>

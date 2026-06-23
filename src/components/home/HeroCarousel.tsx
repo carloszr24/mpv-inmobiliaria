@@ -16,7 +16,7 @@ export function HeroCarousel() {
 
       <div className="absolute inset-0 bg-stone-950/30" />
       <div className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/25 to-stone-950/60" />
-      <div className="absolute inset-0 bg-brand-cyan-dark/5 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
     </div>
   )
 }

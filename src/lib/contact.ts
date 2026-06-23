@@ -1,9 +1,9 @@
 export const AGENT = {
   name: 'MPV Inmobiliaria',
   title: 'Inmobiliaria',
-  city: 'El Casar',
+  city: 'Guadalajara',
   province: 'Guadalajara',
-  tagline: 'Asesoramiento personalizado para compra, venta y alquiler en El Casar y la provincia de Guadalajara.',
+  tagline: 'Asesoramiento personalizado para compra, venta y alquiler en Guadalajara y provincia.',
 } as const
 
 export const CONTACT = {

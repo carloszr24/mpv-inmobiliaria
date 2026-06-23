@@ -97,13 +97,18 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="relative flex items-center h-[4.5rem] md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link
+            href="/"
+            className={cn(
+              'flex items-center shrink-0 transition-all duration-300',
+              transparent ? 'pointer-events-none w-0 opacity-0 overflow-hidden' : 'w-auto opacity-100'
+            )}
+          >
             <Image
               src="/images/inmo-mpv.png"
               alt={`${AGENT.name} logo`}
               width={300}
               height={80}
-              priority
               className="h-14 w-auto md:h-[4.25rem] lg:h-[4.5rem]"
             />
           </Link>

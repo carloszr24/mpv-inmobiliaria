@@ -5,7 +5,7 @@ import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
 const stats = [
   { value: '+300', label: 'propiedades vendidas' },
   { value: '< 60 días', label: 'tiempo medio de cierre' },
-  { value: '100%', label: 'atención personalizada' },
+  { value: '4,9/5', label: '+200 reseñas positivas' },
 ]
 
 export function ClientFirstSection() {

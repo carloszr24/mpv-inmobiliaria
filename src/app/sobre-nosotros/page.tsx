@@ -82,7 +82,7 @@ const services = [
   {
     icon: BuildingIcon,
     title: 'Compra y venta residencial',
-    desc: 'Pisos, casas y locales en El Casar y la provincia de Guadalajara con gestión integral de principio a fin.',
+    desc: 'Pisos, casas y locales en Guadalajara y provincia con gestión integral de principio a fin.',
   },
   {
     icon: GlobeIcon,
@@ -96,10 +96,10 @@ export default function SobreNosotrosPage() {
     <div className="pt-16">
       <section className="bg-stone-950 text-white py-20 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
-          <p className="text-brand-cyan text-xs tracking-[0.3em] uppercase mb-4">Quiénes somos</p>
+          <p className="text-stone-300 text-xs tracking-[0.3em] uppercase mb-4">Quiénes somos</p>
           <h1 className="font-display text-5xl md:text-6xl font-light">Sobre nosotros</h1>
           <p className="text-stone-400 mt-4 text-lg font-light max-w-md">
-            Agencia inmobiliaria especializada en El Casar y la provincia de Guadalajara.
+            Agencia inmobiliaria especializada en Guadalajara y provincia.
           </p>
         </div>
       </section>

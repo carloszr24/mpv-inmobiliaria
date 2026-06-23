@@ -23,9 +23,9 @@ const logo = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'MPV Inmobiliaria | Agencia inmobiliaria en El Casar, Guadalajara',
-  description: 'Compra, venta y alquiler de propiedades en El Casar y la provincia de Guadalajara con asesoramiento cercano y profesional.',
-  keywords: 'mpv inmobiliaria, inmobiliaria el casar, agencia inmobiliaria guadalajara, compra vivienda, venta vivienda, alquiler',
+  title: 'MPV Inmobiliaria | Agencia inmobiliaria en Guadalajara',
+  description: 'Compra, venta y alquiler de propiedades en Guadalajara y provincia con asesoramiento cercano y profesional.',
+  keywords: 'mpv inmobiliaria, inmobiliaria guadalajara, agencia inmobiliaria guadalajara, compra vivienda, venta vivienda, alquiler',
 }
 
 export default function RootLayout({
