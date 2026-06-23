@@ -67,7 +67,7 @@ export default async function HomePage() {
             >
               <Link
                 href="/propiedades"
-                className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
+                className="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-semibold text-center border-2 border-[#f5c542] bg-[#f5c542] text-stone-900 box-border shadow-[0_4px_24px_rgba(0,0,0,0.35)] hover:bg-[#ffcf4d] hover:border-[#ffcf4d] transition-colors duration-200"
               >
                 Quiero comprar
               </Link>
