@@ -41,36 +41,41 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-svh min-h-[32rem] flex items-center justify-center overflow-hidden pt-[4.5rem] pb-8 md:pt-20 md:pb-10">
+      <section className="relative h-svh min-h-[32rem] flex flex-col overflow-hidden pt-[4.5rem] pb-6 md:pt-20 md:pb-8">
         <div className="absolute inset-0">
           <HeroCarousel />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 -mt-4 md:-mt-6 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
-          <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
-            Compra o vende tu vivienda en Guadalajara
-            <span className="hidden md:inline"> </span>
-            <br className="md:hidden" aria-hidden="true" />
-            en <span className="text-white font-semibold [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
-          </h1>
-          <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,22rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
-            Te acompañamos desde el inicio hasta el final de la operación con un servicio totalmente personalizado
-          </p>
-          <div
-            className="flex w-full max-w-xl mx-auto flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
-            style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}
-          >
-            <Link
-              href="/propiedades"
-              className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
+        <div className="relative z-10 flex flex-1 flex-col items-center w-full max-w-5xl mx-auto px-4 min-[400px]:px-6">
+          <div className="flex flex-1 flex-col items-center justify-end w-full text-center pt-8 md:pt-14 pb-2 md:pb-4">
+            <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
+              Compra o vende tu vivienda en Guadalajara
+              <span className="hidden md:inline"> </span>
+              <br className="md:hidden" aria-hidden="true" />
+              en{' '}
+              <span className="font-semibold text-[#f5c542] [text-shadow:0_1px_12px_rgba(0,0,0,0.65)] underline decoration-[#f5c542]/90 decoration-2 underline-offset-[0.18em]">
+                menos de 60 días
+              </span>
+            </h1>
+            <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,22rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
+              Te acompañamos desde el inicio hasta el final de la operación con un servicio totalmente personalizado
+            </p>
+            <div
+              className="flex w-full max-w-xl mx-auto flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
+              style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}
             >
-              Quiero comprar
-            </Link>
-            <ValoracionGratuitaModal
-              triggerLabel="Quiero vender"
-              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-stone-900 transition-colors duration-200"
-            />
+              <Link
+                href="/propiedades"
+                className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
+              >
+                Quiero comprar
+              </Link>
+              <ValoracionGratuitaModal
+                triggerLabel="Quiero vender"
+                triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-stone-900 transition-colors duration-200"
+              />
+            </div>
           </div>
           <HeroScrollHint />
         </div>
